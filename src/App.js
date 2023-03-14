@@ -32,7 +32,7 @@ function App() {
         { index: true, element: <Home /> },
         { path: "about", element: <About /> },
         { path: "items", element: <Items /> },
-        { path: "items/:itemId", element: <ItemDetails /> },
+        { path: "items/:id", element: <ItemDetails /> },
       ],
     },
   ]);
