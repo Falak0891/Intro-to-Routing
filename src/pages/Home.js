@@ -1,9 +1,11 @@
-function Home(){
-    return(
-        <>
-            <h1>Home</h1>
-        </>
-    )
+function Home() {
+  return (
+    <>
+      <main>
+        <h1>Home Page</h1>
+      </main>
+    </>
+  );
 }
 
 export default Home;

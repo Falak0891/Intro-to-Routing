@@ -1,36 +1,11 @@
-import { Link, NavLink, Outlet } from "react-router-dom";
-function Navbar() {
+function Navbar({ setPage }) {
   return (
     <>
-      <div>
-        <NavLink
-          to="/"
-          style={({ isActive }) =>
-            isActive ? { color: "blue" } : { color: "red" }
-          }
-        >
-          HOME
-        </NavLink>
-
-        <NavLink
-          to="/about"
-          style={({ isActive }) =>
-            isActive ? { color: "blue" } : { color: "red" }
-          }
-        >
-          ABOUT
-        </NavLink>
-        
-        <NavLink
-          to="/items"
-          style={({ isActive }) =>
-            isActive ? { color: "blue" } : { color: "red" }
-          }
-        >
-          ITEMS
-        </NavLink>
+      <div className="nav">
+        <h4 onClick={() => setPage("home")}>HOME</h4>
+        <h4 onClick={() => setPage("about")}>ABOUT</h4>
+        <h4 onClick={() => setPage("items")}>ITEMS</h4>
       </div>
-      <Outlet />
     </>
   );
 }
