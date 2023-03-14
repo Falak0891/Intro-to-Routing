@@ -9,6 +9,7 @@ import About from "./pages/About";
 import Items from "./pages/Items";
 import Navbar from "./components/Navbar";
 import ItemDetails from "./pages/itemDetails";
+import ErrorPage from "./pages/ErrorPage";
 
 function App() {
   /**** *** NESTED ROUTES****** */
@@ -28,11 +29,17 @@ function App() {
     {
       path: "/",
       element: <Navbar />,
+      errorElement: <ErrorPage />,
       children: [
         { index: true, element: <Home /> },
         { path: "about", element: <About /> },
-        { path: "items", element: <Items /> },
-        { path: "items/:id", element: <ItemDetails /> },
+        {
+          path: "items",
+          children: [
+            { index: true, element: <Items /> },
+            { path: ":id", element: <ItemDetails /> },
+          ],
+        },
       ],
     },
   ]);
