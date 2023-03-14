@@ -1,19 +1,5 @@
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Items from "./pages/Items";
-import Navbar from "./components/Navbar";
-import { useState } from "react";
-
 function App() {
-  const [page, setPage] = useState("home");
-  return (
-    <>
-      <Navbar setPage={setPage} />
-      {page === "home" && <Home />}
-      {page === "about" && <About />}
-      {page === "items" && <Items />}
-    </>
-  );
+  return <></>;
 }
 
 export default App;
